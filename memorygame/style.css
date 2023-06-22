@@ -1,3 +1,9 @@
+.game_section{
+   width: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 .grid {
   display: flex;
   flex-wrap: wrap;
