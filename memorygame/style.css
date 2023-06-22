@@ -1,0 +1,14 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  margin: 1rem;
+}
+
+img{
+    width: 100px;
+  height: 100px;
+  margin: 10px;
+}
