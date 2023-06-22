@@ -1,15 +1,17 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 100%;
   align-items: center;
-  margin: 1rem;
+  justify-content: center;
+  justify-items: center;
+  margin: 3px;
 }
 
 img{
     width: 100px;
   height: 100px;
-  margin: 10px;
+  margin: 3px;
   cursor: pointer;
 }
