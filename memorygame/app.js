@@ -43,15 +43,23 @@ const cardArray = [
 
 // shuffle the card first
 cardArray.sort(() => 0.5 - Math.random());
-
+// display the item to the grid
 function createBoard() {
   for (let i = 0; i < cardArray.length; i++) {
     const card = document.createElement('img');
     card.setAttribute('src', 'images/blank.png');
     card.setAttribute('data-id', i);
+    card.addEventListener('click', flipCard);
     gridDisplay.appendChild(card);
   }
 }
 
 createBoard();
-// display the item to the grid
+
+// flipcard
+
+function flipCard() {
+  const cardId = this.getAttribute('data-id');
+  console.log(cardArray[cardId]);
+  console.log(cardId);
+}
