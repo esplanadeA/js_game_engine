@@ -1,3 +1,18 @@
+.titile_section{
+   width: auto;
+}
+
+h1{
+font-family: 'Carter One', cursive;
+font-family: 'Titillium Web', sans-serif;
+font-size: 72px;
+background: -webkit-linear-gradient(#eee, #d185c3);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
+}
+
+
 .game_section{
    width: auto;
    display: flex;
@@ -20,4 +35,21 @@ img{
   height: 100px;
   margin: 3px;
   cursor: pointer;
+}
+
+.score_section{
+   width: auto;
+   width: 500px;
+   display: flex;
+    align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+h3{
+   font-family: 'Carter One', cursive;
+   font-family: 'Titillium Web', sans-serif;
+   font-size: 23px;
+   color:#d185c3;
 }
