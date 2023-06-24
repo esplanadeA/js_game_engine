@@ -1,3 +1,8 @@
+html{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(173,149,6,0.6055672268907564) 23%, rgba(207,218,113,1) 67%, rgba(255,0,22,0.510329131652661) 100%);
+}
+
 .titile_section{
    width: auto;
 }
@@ -35,11 +40,12 @@ img{
   height: 100px;
   margin: 3px;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .score_section{
-   width: auto;
-   width: 500px;
+  
+   width: 80%;
    display: flex;
     align-items: center;
   justify-content: center;
