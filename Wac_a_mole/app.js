@@ -7,7 +7,7 @@ let result = 0;
 let hitPosition;
 let currentTime = 60;
 let timerId = null;
-
+// adding the suqare and shows on the grid
 function randomSquare() {
   squares.forEach((square) => {
     square.classList.remove('mole');
@@ -29,12 +29,14 @@ squares.forEach((square) => {
   });
 });
 
+// show the mole to the random square added
 function moveMole() {
   timerId = setInterval(randomSquare, 500);
 }
 
 moveMole();
 
+// score section, adding time countDown
 function countDown() {
   currentTime--;
   timeLeft.textContent = currentTime;
