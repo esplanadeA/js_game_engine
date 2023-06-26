@@ -4,6 +4,9 @@
   width: 140px;
   display: flex;
   flex-wrap: wrap;
+  background-color: antiquewhite;
+  box-shadow:0 0 20px;
+  border-radius: 3px;
 }
 
 .grid div {
@@ -13,10 +16,10 @@
 
 .player-one {
   background-color: red;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 .player-two {
   background-color: blue;
-  border-radius: 10px;
+  border-radius: 50%;
 }
