@@ -22,6 +22,10 @@ td {
   width: 75px;
 }
 
+.icon{
+   font-size: 8rem;
+   padding: 1rem;
+}
 .container{
     text-align: center;
 }
