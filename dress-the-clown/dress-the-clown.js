@@ -51,6 +51,15 @@ function changeBodyPart(shift) {
   bodyIndex += shift;
   if (bodyIndex < 0) bodyIndex = 2;
   if (bodyIndex > 2) bodyIndex = 0;
+
+  const bodyImages = document.getElementsByClassName('dress-an-image');
+  for (let i = 0; i < bodyImages.length; i++) {
+    if (i === bodyIndex) {
+      bodyImages[i].style.display = 'block';
+    } else {
+      bodyImages[i].style.display = 'none';
+    }
+  }
 }
 
 // use the right arrow key to move between different head images.
