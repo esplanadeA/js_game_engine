@@ -53,11 +53,15 @@ function changeBodyPart(shift) {
   if (bodyIndex > 2) bodyIndex = 0;
 
   const bodyImages = document.getElementsByClassName('dress-an-image');
+  const iconDivs = document.getElementsByClassName('icon');
+
   for (let i = 0; i < bodyImages.length; i++) {
     if (i === bodyIndex) {
       bodyImages[i].style.display = 'block';
+      iconDivs[i].style.display = 'block';
     } else {
       bodyImages[i].style.display = 'none';
+      iconDivs[i].style.display = 'none';
     }
   }
 }
