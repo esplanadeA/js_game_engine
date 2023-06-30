@@ -26,3 +26,12 @@ function randomCell(arr) {
 randomCell(cellCollection);
 
 // put a image in the random cell
+// 1.adding img tag
+const image = document.createElement('img');
+// adding image detail
+image.src = './mole.PNG';
+image.id = 'mole';
+image.width = '75';
+image.height = '75';
+// put the image to the random cell
+randomCell(cellCollection).appendChild(image);
