@@ -5,6 +5,7 @@
 //step 1 select the cell and put in the array
 //2.make it random
 //3. put the image in
+// 4.disappear when click
 
 // 4. a button to start the game
 
@@ -23,7 +24,6 @@ function randomCell(arr) {
 }
 
 // call the random function
-randomCell(cellCollection);
 
 // put a image in the random cell
 // 1.adding img tag
@@ -35,3 +35,14 @@ image.width = '75';
 image.height = '75';
 // put the image to the random cell
 randomCell(cellCollection).appendChild(image);
+
+let object = document.getElementById('mole');
+object.addEventListener('click', whackedMole);
+function whackedMole() {
+  randomCell(cellCollection);
+  //   call the function again once clicked
+  randomCell(cellCollection).appendChild(image);
+  var audio = new Audio();
+  audio.src = './whack-audio.wav';
+  audio.play();
+}
