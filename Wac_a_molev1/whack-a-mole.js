@@ -34,10 +34,16 @@ image.id = 'mole';
 image.width = '75';
 image.height = '75';
 // put the image to the random cell
-randomCell(cellCollection).appendChild(image);
+function showImageInRandomCell() {
+  randomCell(cellCollection).appendChild(image);
+}
+
+// call the function every 1 second
+const intervalId = setInterval(showImageInRandomCell, 1000);
 
 let object = document.getElementById('mole');
 object.addEventListener('click', whackedMole);
+
 function whackedMole() {
   randomCell(cellCollection);
   //   call the function again once clicked
@@ -46,3 +52,8 @@ function whackedMole() {
   audio.src = './whack-audio.wav';
   audio.play();
 }
+
+// Function to stop the interval after 10 seconds
+setTimeout(function () {
+  clearInterval(intervalId);
+}, 10000);
