@@ -37,9 +37,15 @@ image.height = '75';
 function showImageInRandomCell() {
   randomCell(cellCollection).appendChild(image);
 }
-
-// call the function every 1 second
-const intervalId = setInterval(showImageInRandomCell, 1000);
+// click button to start the game
+const button = document.getElementById('myButton');
+button.addEventListener('click', function () {
+  showImageInRandomCell(); // Call the function on button click
+  intervalId = setInterval(showImageInRandomCell, 500); // Start the interval
+  setTimeout(function () {
+    clearInterval(intervalId); // Stop the interval after 10 seconds
+  }, 20000);
+});
 
 let object = document.getElementById('mole');
 object.addEventListener('click', whackedMole);
@@ -54,6 +60,3 @@ function whackedMole() {
 }
 
 // Function to stop the interval after 10 seconds
-setTimeout(function () {
-  clearInterval(intervalId);
-}, 10000);
