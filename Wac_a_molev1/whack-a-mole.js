@@ -1,12 +1,3 @@
-//step 1 select the cell and put in the array
-//2.make it random
-//3. put the image in
-// 4.disappear when click
-
-// 4. a button to start the game
-
-// A function to randomly select which cell should show the mole.
-
 // get the table element to an array
 const cellCollection = Array.from(document.querySelectorAll('td'));
 
@@ -18,8 +9,6 @@ function randomCell(arr) {
 
   return item;
 }
-
-// call the random function
 
 // put a image in the random cell
 // 1.adding img tag
@@ -34,6 +23,11 @@ let score = 0;
 const scoreElement = document.getElementById('WAM_score');
 let isIntervalPaused = false;
 
+// Counter for the number of times the image is displayed
+let imageDisplayCount = 0;
+// Maximum number of image displays
+const maxImageDisplays = 10;
+
 // put the image to the random cell
 function showImageInRandomCell() {
   if (isIntervalPaused) {
@@ -43,6 +37,12 @@ function showImageInRandomCell() {
   let object = document.getElementById('mole');
   console.log(object);
   object.addEventListener('click', whackedMole);
+  imageDisplayCount++;
+  if (imageDisplayCount >= maxImageDisplays) {
+    // Stop the interval after reaching the maximum image displays
+
+    clearInterval(intervalId);
+  }
 }
 // click button to start the game
 const button = document.getElementById('myButton');
@@ -71,7 +71,12 @@ function whackedMole() {
     // Increase the score
     score++;
     // Update the score in the HTML
-    scoreElement.textContent = 'Score:' + score;
+    scoreElement.textContent = 'Score:' + score + '/10';
+  }
+
+  if (imageDisplayCount >= maxImageDisplays) {
+    object.removeEventListener('click', whackedMole); // Remove the click event listener
+    return (image.src = './end.png'); // Stop further image displays
   }
 
   setTimeout(function () {
