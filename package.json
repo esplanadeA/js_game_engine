@@ -4,6 +4,23 @@
     "postcss-cli": "^10.1.0"
   },
   "scripts": {
-    "build": "postcss styles.css -o src/styles.css"
-  }
+    "dev":"npx tailwindcss -i ./css/input.css -o ./styles.css --watch  "
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  },
+  "name": "js_game_engine",
+  "description": "",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/esplanadeA/js_game_engine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esplanadeA/js_game_engine/issues"
+  },
+  "homepage": "https://github.com/esplanadeA/js_game_engine#readme"
 }
