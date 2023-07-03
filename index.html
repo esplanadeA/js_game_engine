@@ -8,61 +8,90 @@
 </head>
 <body>
   <header>
-   <h1 class="bg-black text-sm text-right">sdasds</h1>
-    <nav>
-      <ul>
-        <li>
-         <div>
-    <img class="rounded" :src="img" :alt="imgAlt">
-    <div class="mt-2">
-      <div>
-        <div class="text-xs text-slate-600 uppercase font-bold tracking-wider">eyebrow</div>
-        <div class="font-bold text-slate-700 leading-snug">
-          <a a href="./Wac_a_molev1/Wac_a_mole.html" class="hover:underline">Game 1</a>
+   <div
+    class="relative overflow-hidden bg-cover bg-no-repeat"
+    style="
+      background-position: 80%;
+      background-image: url('./asset/hero.png');
+      height: 500px;
+    ">
+  <div
+      class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
+     >
+      <div class="flex h-full items-center justify-center">
+        <div class="px-6 text-center text-white md:px-12">
+          <h1 class="mb-6 text-5xl font-bold">FOREST GAMES</h1>
         </div>
-        <div class="mt-2 text-sm text-slate-600">{{ pricing }}</div>
       </div>
     </div>
-  </div></li>
-        <li><a href="#game2">Game 2</a></li>
-        <li><a href="#game3">Game 3</a></li>
-        <li><a href="#game4">Game 4</a></li>
-        <li><a href="#game5">Game 5</a></li>
-      </ul>
-    </nav>
-
-    <div class="container mx-auto">
-  <!-- ... -->
-</div>
-
-
   </header>
 
   <main>
-    <!-- Game 1 Section -->
-    <section id="game1">
-      <!-- Content for Game 1 -->
+   <div class="flex text-center m-4 flex-row shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"">
+   <div class="flex-1 m-3 bg-gray-2 px-4">
+      <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+         Game one
+      </h5>
+      <button> Play Now!</button>
+         </div>
+   <div class="flex-1 m-3 bg-gray-2 px-4">game two</div>
+   <div class="flex-1 m-3 bg-gray-2 px-4">game three</div>
+   <div class="flex-1 m-3 bg-gray-2 px-4">game four</div>
+   </div>
+   
+      <!-- <div class="flex-1  text-gray-700 text-center bg-gray-400 px-4 py-2 m-2 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+         <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+         Game one
+         </h5>
+         <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+         Some quick example text to build on the card title and make up the
+         bulk of the card's content.
+         </p>
+         <button
+         type="button"
+         class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+         data-te-ripple-init
+         data-te-ripple-color="light">
+        Play Now
+         </button>
+      </div>
+         <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+               Game one
+            </h5>
+            <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+               Some quick example text to build on the card title and make up the
+               bulk of the card's content.
+            </p>
+            <button
+               type="button"
+               class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+               data-te-ripple-init
+               data-te-ripple-color="light">
+            Play Now
+            </button>
+      </div>
+       <div class="flex-1 text-gray-700 text-center bg-gray-400 px-4 py-2 m-2 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+            <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+               Game three
+            </h5>
+            <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
+               Some quick example text to build on the card title and make up the
+               bulk of the card's content.
+            </p>
+            <button
+               type="button"
+               class="rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+               data-te-ripple-init
+               data-te-ripple-color="light">
+            Play Now
+            </button>
+      </div>
+      </div>
+   </div>
+  </div>
     </section>
-
-    <!-- Game 2 Section -->
-    <section id="game2">
-      <!-- Content for Game 2 -->
-    </section>
-
-    <!-- Game 3 Section -->
-    <section id="game3">
-      <!-- Content for Game 3 -->
-    </section>
-
-    <!-- Game 4 Section -->
-    <section id="game4">
-      <!-- Content for Game 4 -->
-    </section>
-
-    <!-- Game 5 Section -->
-    <section id="game5">
-      <!-- Content for Game 5 -->
-    </section>
+    </div> -->
   </main>
 
   <footer>
