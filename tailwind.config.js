@@ -21,6 +21,16 @@ module.exports = {
     },
     extend: {
       colors: {
+        transparent: 'transparent',
+        current: 'currentColor',
+        white: '#ffffff',
+        purple: '#3f3cbb',
+        midnight: '#121063',
+        metal: '#565584',
+        lime: '#ecfccb',
+        tahiti: '#3ab7bf',
+        silver: '#ecebff',
+        bermuda: '#78dcca',
         cyan: '#9cdbff',
       },
       spacing: {
