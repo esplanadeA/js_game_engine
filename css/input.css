@@ -1,3 +1,117 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      padding:10px;
+      overflow: hidden;
+      position: fixed;
+      top:0;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      z-index: 100
+     }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .navbar-logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-home {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right:50px ;
+    }
+    
+    .titile_section{
+   width: auto;
+}
+
+html{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(173,149,6,0.6055672268907564) 23%, rgba(207,218,113,1) 67%, rgba(255,0,22,0.510329131652661) 100%);
+}
+
+h1{
+font-family: 'Carter One', cursive;
+font-family: 'Titillium Web', sans-serif;
+font-size: 72px;
+color: white;
+text-align: center;
+}
+
+
+.game_section{
+   width: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 3px;
+}
+
+.RM_img{
+    width: 100px;
+  height: 100px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.score_section{
+   width: 80%;
+   display: flex;
+   align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+h3{
+   font-family: 'Carter One', cursive;
+   font-family: 'Titillium Web', sans-serif;
+   font-size: 23px;
+   color:white;
+}
+/* responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .grid {
+    max-width: 400px;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}

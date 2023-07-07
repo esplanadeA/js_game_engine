@@ -81,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = document.createElement('img');
       card.setAttribute('src', 'images/blank.png');
       card.setAttribute('data-id', i);
+      card.setAttribute('class', 'RM_img');
       card.addEventListener('click', flipCard);
       gridDisplay.appendChild(card);
     }
