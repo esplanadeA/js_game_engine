@@ -567,6 +567,11 @@ video {
   margin-right: 2rem;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -589,6 +594,22 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .w-full {
@@ -677,6 +698,16 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pt-5 {
@@ -799,9 +830,8 @@ h1{
 .button-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100px;
-  margin: 1rem;
+  align-items: flex-end;
+  height: 100%;
 }
 
 /* RM */
