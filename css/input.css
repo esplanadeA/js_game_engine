@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* navbar */
  .navbar {
       display: flex;
       align-items: center;
@@ -42,6 +42,7 @@
    width: auto;
 }
 
+/* background of all */
 html{
   background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(173,149,6,0.6055672268907564) 23%, rgba(207,218,113,1) 67%, rgba(255,0,22,0.510329131652661) 100%);
@@ -54,7 +55,18 @@ font-size: 72px;
 color: white;
 text-align: center;
 }
-
+/* Landing Page */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 1rem;
+}
+/* RM */
+.RM{
+   height: 100%;
+}
 
 .game_section{
    width: auto;
@@ -62,7 +74,7 @@ text-align: center;
    align-items: center;
    justify-content: center;
 }
-.grid {
+.RM_grid {
   display: flex;
   flex-wrap: wrap;
   width: 500px;
