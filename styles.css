@@ -554,6 +554,10 @@ video {
   margin: 2.5rem;
 }
 
+.m-6 {
+  margin: 1.5rem;
+}
+
 .m-8 {
   margin: 2rem;
 }
@@ -563,12 +567,13 @@ video {
   margin-right: 1.25rem;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .mb-6 {
@@ -591,6 +596,10 @@ video {
   height: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
@@ -599,12 +608,12 @@ video {
   max-width: 24rem;
 }
 
-.flex-row {
-  flex-direction: row;
-}
-
 .flex-col {
   flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .items-center {
@@ -647,6 +656,10 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {
@@ -807,6 +820,36 @@ h1{
   height: 100%;
 }
 
+/* dress a clown */
+
+.dress-a-parent {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.dress-an-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.head {
+  z-index: 2
+}
+
+.body {
+  z-index: 0
+}
+
+.shoes {
+  z-index: 1
+}
+
 /* RM */
 
 .RM{
@@ -913,14 +956,14 @@ h3{
   }
 }
 
-@media (max-width: 1279px) {
-  .desktop\:flex-row {
+@media (min-width: 640px) {
+  .tablet\:flex-row {
     flex-direction: row;
   }
 }
 
-@media (max-width: 767px) {
-  .tablet\:flex-col {
-    flex-direction: column;
+@media (min-width: 1280px) {
+  .desktop\:flex-row {
+    flex-direction: row;
   }
 }

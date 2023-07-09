@@ -4,17 +4,14 @@ module.exports = {
   content: ['./*.{html,js}', './Wac_a_molev1/*.{html.js}'],
   theme: {
     screens: {
-      desktop: { max: '1279px' },
-      // => @media (max-width: 1279px) { ... }
+      tablet: '640px',
+      // => @media (min-width: 640px) { ... }
 
-      laptop: { max: '1023px' },
-      // => @media (max-width: 1023px) { ... }
+      laptop: '1024px',
+      // => @media (min-width: 1024px) { ... }
 
-      tablet: { max: '767px' },
-      // => @media (max-width: 767px) { ... }
-
-      sm: { max: '639px' },
-      // => @media (max-width: 639px) { ... }
+      desktop: '1280px',
+      // => @media (min-width: 1280px) { ... }
     },
     fontFamily: {
       display: ['Gilroy', 'sans-serif'],

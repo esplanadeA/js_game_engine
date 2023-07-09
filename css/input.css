@@ -62,6 +62,34 @@ text-align: center;
   align-items: flex-end;
   height: 100%;
 }
+/* dress a clown */
+.dress-a-parent {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.dress-an-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.head {
+  z-index: 2
+}
+
+.body {
+  z-index: 0
+}
+
+.shoes {
+  z-index: 1
+}
 /* RM */
 .RM{
    height: 100%;
