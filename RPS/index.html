@@ -3,16 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Rock Paper Scissors Tutorial</title>
+	<link rel="stylesheet" href="../css/input.css">
   </head>
+
   <body>
+   <nav class="navbar">
+      <div class="navbar-logo">
+         <img src="../asset/logo.png" alt="Logo">
+      </div>
+      <a  href="../index.html" class="navbar-home">Home</a>
+  </nav>
+  <div class="flex h-full text-centerp-16 m-56">
+      <h2>Computer Choice: <span id="computer-choice"></span></h2>
+      <h2>Your Choice: <span id="user-choice"></span></h2>
+      <h2>Result: <span id="result"></span></h2>
 
-    <h2>Computer Choice: <span id="computer-choice"></span></h2>
-    <h2>Your Choice: <span id="user-choice"></span></h2>
-    <h2>Result: <span id="result"></span></h2>
-
-    <button id="rock">rock</button>
-    <button id="paper">paper</button>
-    <button id="scissors">scissors</button>
+      <button id="rock">Rock</button>
+      <button id="paper">Paper</button>
+      <button id="scissors">Scissors</button>
+    </div>
 
     <script src="app.js" charset="utf-8"></script>
   </body>
