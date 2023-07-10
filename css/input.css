@@ -136,6 +136,12 @@ h3{
    font-size: 23px;
    color:white;
 }
+/* RPS */
+.RPS_container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 /* responsive */
 @media (max-width: 768px) {
   h1 {
