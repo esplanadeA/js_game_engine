@@ -21,13 +21,13 @@ possibleChoices.forEach((possibleChoice) =>
 function generateComputerChoice() {
   const randomNumber = Math.floor(Math.random() * possibleChoices.length + 1);
   if (randomNumber === 1) {
-    computerChoice = 'rock';
+    computerChoice = 'Rock';
   }
   if (randomNumber === 2) {
-    computerChoice = 'paper';
+    computerChoice = 'Paper';
   }
   if (randomNumber === 3) {
-    computerChoice = 'scissors';
+    computerChoice = 'Scissors';
   }
   computerChoiceDisplay.innerHTML = computerChoice;
 }
@@ -36,25 +36,25 @@ function generateComputerChoice() {
 
 function getResult() {
   if (computerChoice === userChoice) {
-    result = `'it's a draw!`;
+    result = `'It's a draw!'`;
   }
-  if (computerChoice === 'rock' && userChoice === 'paper') {
-    result = `'you win!`;
+  if (computerChoice === 'Rock' && userChoice === 'Paper') {
+    result = `'You Win!'`;
   }
-  if (computerChoice === 'rock' && userChoice === 'scissors') {
-    result = `'you lose!`;
+  if (computerChoice === 'Rock' && userChoice === 'Scissors') {
+    result = `'You Lose!'`;
   }
-  if (computerChoice === 'paper' && userChoice === 'rock') {
-    result = `'you lose!`;
+  if (computerChoice === 'Paper' && userChoice === 'Rock') {
+    result = `'You Lose!'`;
   }
-  if (computerChoice === 'paper' && userChoice === 'scissors') {
-    result = `'you win!`;
+  if (computerChoice === 'Paper' && userChoice === 'Scissors') {
+    result = `'You Win!'`;
   }
-  if (computerChoice === 'scissors' && userChoice === 'rock') {
-    result = `'you win!`;
+  if (computerChoice === 'Scissors' && userChoice === 'Rock') {
+    result = `'You Win!'`;
   }
-  if (computerChoice === 'scissors' && userChoice === 'paper') {
-    result = `'you lose!`;
+  if (computerChoice === 'Scissors' && userChoice === 'Paper') {
+    result = `'You Lose!'`;
   }
   resultDisplay.innerHTML = result;
 }
