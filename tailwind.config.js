@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ['./*.{html,js}', './Wac_a_molev1/*.{html.js}'],
+  content: [
+    './*.{html,js}',
+    './memorygame/index.html',
+    './Wac_a_molev1/.html .js',
+  ],
   theme: {
     screens: {
       tablet: '640px',
