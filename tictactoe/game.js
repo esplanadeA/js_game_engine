@@ -12,8 +12,8 @@ let gameIsOver;
 function cellClicked(e) {
   let cell = e.target;
   console.log(cell);
-  if (cell.textContent === '') {
-    let symbol = noughtsTurn ? 'O' : 'X';
+  if (cell.textContent === '' && !gameIsOver) {
+    let symbol = noughtsTurn ? 'O' : makeComputerMove(cell);
     cell.textContent = symbol;
     if (symbol === 'O') {
       cell.classList.add('highlightedPlayer1');
@@ -21,15 +21,26 @@ function cellClicked(e) {
     checkForWin(symbol);
     if (!gameIsOver) {
       noughtsTurn = !noughtsTurn;
-      let Turn = noughtsTurn ? 'O' : 'X';
+      let Turn = noughtsTurn ? 'O' : 'Computer';
       document.getElementById('subtitle').innerHTML = Turn + "'s turn now";
+      if (!noughtsTurn) {
+        setTimeout(makeComputerMove, 300); // Introduce a delay for better user experience
+      }
     }
   }
 }
 
 function makeComputerMove() {
   // get the cells
-  // do a random cell
+  // do a random c
+  if (cells.length > 0) {
+    let randomIndex = Math.floor(Math.random() * cells.length);
+    let computerMove = cells[randomIndex];
+    computerMove.textContent = 'X';
+    computerMove.classList.add('highlightedPlayer2');
+
+    noughtsTurn = true;
+  }
 }
 
 function checkForWin(symbol) {
