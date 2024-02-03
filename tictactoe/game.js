@@ -1,13 +1,15 @@
 console.log('Welcome to Tic-Tac-Toe! Enjoy!');
 // get the array where the table grid is nine item in the array
 let cells = Array.from(document.getElementsByTagName('td'));
-console.log(document.getElementsByTagName('td'));
-
+console.log(document.getElementById('restart-game'));
+document.getElementById('restart-game').addEventListener('click', restartGame);
 for (let i = 0; i < cells.length; i++) {
   cells[i].addEventListener('click', cellClicked);
 }
 let noughtsTurn = true; //boolean
 let gameIsOver;
+let playerOscore = 0;
+let playerXscore = 0;
 
 function cellClicked(e) {
   if (!gameIsOver) {
@@ -79,9 +81,16 @@ function checkForWin(symbol) {
     gameIsOver = true;
 
   if (gameIsOver) {
+    if (symbol === 'O') {
+      playerOscore += 1; // Increment the score for player 'O'
+    } else if (symbol === 'X') {
+      playerXscore += 1;
+    }
     console.log(symbol);
     console.log(document.getElementById('subtitle'));
     document.getElementById('subtitle').innerHTML = 'PLAYER' + ' ' + symbol + ' ' + 'YOU ARE WINNER!!!!!';
+    document.getElementById('playerXscore').innerHTML = playerXscore;
+    document.getElementById('playerOscore').innerHTML = playerOscore;
   } else {
     // Check for a tie if all cells are filled
     let isTie = cells.every((cell) => cell.textContent !== '');
@@ -90,4 +99,14 @@ function checkForWin(symbol) {
       document.getElementById('subtitle').innerHTML = "It's a TIE!";
     }
   }
+}
+
+function restartGame() {
+  // Clear the cells and reset game state
+  cells.forEach((cell) => {
+    cell.textContent = '';
+    cell.classList.remove('highlightedPlayer1', 'highlightedPlayer2');
+  });
+  gameIsOver = false;
+  document.getElementById('subtitle').innerHTML = "O's turn now";
 }

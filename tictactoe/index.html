@@ -34,11 +34,12 @@
       <!-- new content  -->
         <div class = 'scores'>
             <h2 class="playerStatus"></h2>
-            <h2 class = 'scores-player'>Player:0
+            <h2 id='playerX' class = 'scores-playerX'>Player:<span id="playerOscore"></span>
             </h2>
-            <h2 class = 'scores-computer'>Computer:0
+            <h2 id='playerO' class = 'scores-Computer'>Computer:<span id="playerXscore">
+            </span>
             </h2>
-            <button onClick="window.location.reload();"> Replay </button>
+            <button id="restart-game"> Replay </button>
         <script src="game.js"></script>
     </body>
 </html>
