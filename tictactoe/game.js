@@ -1,7 +1,6 @@
 console.log('Welcome to Tic-Tac-Toe! Enjoy!');
 // get the array where the table grid is nine item in the array
 let cells = Array.from(document.getElementsByTagName('td'));
-console.log(document.getElementById('restart-game'));
 document.getElementById('restart-game').addEventListener('click', restartGame);
 for (let i = 0; i < cells.length; i++) {
   cells[i].addEventListener('click', cellClicked);
@@ -14,7 +13,6 @@ let playerXscore = 0;
 function cellClicked(e) {
   if (!gameIsOver) {
     let cell = e.target;
-
     if (cell.textContent === '') {
       let symbol = noughtsTurn ? 'O' : 'X';
       cell.textContent = symbol;
@@ -86,8 +84,6 @@ function checkForWin(symbol) {
     } else if (symbol === 'X') {
       playerXscore += 1;
     }
-    console.log(symbol);
-    console.log(document.getElementById('subtitle'));
     document.getElementById('subtitle').innerHTML = 'PLAYER' + ' ' + symbol + ' ' + 'YOU ARE WINNER!!!!!';
     document.getElementById('playerXscore').innerHTML = playerXscore;
     document.getElementById('playerOscore').innerHTML = playerOscore;
