@@ -1,13 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ['./*.{html,js}', './Wac_a_molev1/*.{html.js}'],
+  content: [
+    './*.{html,js}',
+    './memorygame/index.html',
+    './Wac_a_molev1/.html .js',
+  ],
   theme: {
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
+      tablet: '640px',
+      // => @media (min-width: 640px) { ... }
+
+      laptop: '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      desktop: '1280px',
+      // => @media (min-width: 1280px) { ... }
     },
     fontFamily: {
       display: ['Gilroy', 'sans-serif'],

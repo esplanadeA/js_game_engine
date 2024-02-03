@@ -26,7 +26,7 @@ let head = document.getElementById('head');
 let body = document.getElementById('body');
 let shoes = document.getElementById('shoes');
 
-let bodyVars = [body, head, shoes];
+let bodyVars = [head, body, shoes];
 let bodyParts = ['head', 'body', 'shoes'];
 let bodyIndex = 0;
 let bodyArray = [0, 0, 0];
@@ -41,9 +41,9 @@ function checkKey(e) {
   } else if (e.key === 'ArrowDown') {
     changeBodyPart(1);
   } else if (e.key === 'ArrowLeft') {
-    changeClownHead(-1);
+    changeClown(-1);
   } else if (e.key === 'ArrowRight') {
-    changeClownHead(1);
+    changeClown(1);
   }
 }
 
@@ -60,15 +60,15 @@ function changeBodyPart(shift) {
       bodyImages[i].style.display = 'block';
       iconDivs[i].style.display = 'block';
     } else {
-      bodyImages[i].style.display = 'none';
-      iconDivs[i].style.display = 'none';
+      bodyImages[i].style.display = 'block';
+      iconDivs[i].style.display = 'block';
     }
   }
 }
 
 // use the right arrow key to move between different head images.
 // document.addEventListener(''))
-function changeClownHead(shift) {
+function changeClown(shift) {
   bodyArray[bodyIndex] += shift;
 
   if (bodyArray[bodyIndex] < 0) {

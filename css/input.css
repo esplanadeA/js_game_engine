@@ -1,3 +1,167 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* navbar */
+ .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      padding:10px;
+      overflow: hidden;
+      position: fixed;
+      top:0;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      z-index: 100
+     }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .navbar-logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-home {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right:50px ;
+    }
+    
+    .titile_section{
+   width: auto;
+}
+
+/* background of all */
+html{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(173,149,6,0.6055672268907564) 23%, rgba(207,218,113,1) 67%, rgba(255,0,22,0.510329131652661) 100%);
+}
+
+h1{
+font-family: 'Carter One', cursive;
+font-family: 'Titillium Web', sans-serif;
+font-size: 72px;
+color: white;
+text-align: center;
+}
+/* Landing Page */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+/* dress a clown */
+.dress-a-parent {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.dress-an-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.head {
+  z-index: 2
+}
+
+.body {
+  z-index: 0
+}
+
+.shoes {
+  z-index: 1
+}
+/* RM */
+.RM{
+   height: 100%;
+}
+
+.game_section{
+   width: auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.RM_grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 3px;
+}
+
+.RM_img{
+    width: 100px;
+  height: 100px;
+  margin: 3px;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.score_section{
+   width: 80%;
+   display: flex;
+   align-items: center;
+  justify-content: center;
+  justify-items: center;
+  
+}
+
+h3{
+   font-family: 'Carter One', cursive;
+   font-family: 'Titillium Web', sans-serif;
+   font-size: 23px;
+   color:white;
+}
+/* RPS */
+.RPS_container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 8rem;
+   width: auto;
+   text-align: left;
+   color: white;
+}
+/* responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .grid {
+    max-width: 400px;
+  }
+
+  img {
+    width: 80px;
+    height: 80px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
