@@ -36,16 +36,13 @@ function cellClicked(e) {
 function makeComputerMove() {
   setTimeout(() => {
     let availableCells = cells.filter((cell) => cell.textContent === '');
-
     // Check if there are any available cells
     if (availableCells.length > 0) {
       // Choose a random available cell for the computer's move
       let randomIndex = Math.floor(Math.random() * availableCells.length);
       let computerCell = availableCells[randomIndex];
-
       // Set the symbol for the computer (e.g., 'X')
       let symbol = noughtsTurn ? 'O' : 'X';
-
       // Update the cell content and style
       computerCell.textContent = symbol;
       if (symbol === 'O') {
@@ -53,14 +50,10 @@ function makeComputerMove() {
       } else {
         computerCell.classList.add('highlightedPlayer2');
       }
-
       // Check for win after the computer's move
       checkForWin(symbol);
-
       // Update turn and subtitle
-      noughtsTurn = true;
-      let turn = noughtsTurn ? 'O' : 'X';
-      document.getElementById('subtitle').innerHTML = turn + "'s turn now";
+      noughtsTurn = !noughtsTurn;
     }
   }, 500);
 }
@@ -96,15 +89,5 @@ function checkForWin(symbol) {
       gameIsOver = true;
       document.getElementById('subtitle').innerHTML = "It's a TIE!";
     }
-
-    // if a symbol appears three times in a row in the board cells i.e. a winning line
-
-    // either horizontally, vertically, OR diagonally
-
-    // the game is over
-
-    // if the game is over
-
-    // update the subtitle with the
   }
 }
