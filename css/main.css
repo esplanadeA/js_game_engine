@@ -64,7 +64,6 @@ td {
 }
 
 .navbar {
-            /* Your navbar styles here */
             position: fixed;
             top: 0;
             left: 0;
@@ -72,7 +71,7 @@ td {
             background-color: #ffffff; /* Adjust as needed */
             z-index: 999; /* Ensure the navbar appears on top */
         }
-        
+
 .arrow {
     position: absolute;
     top: 50%;
