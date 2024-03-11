@@ -108,7 +108,7 @@ button.addEventListener('click', () => {
     document.getElementById('WAM_score').textContent = 'Score: 0/10';
     const gameOverTitle = document.querySelector('.titles');
     gameOverTitle.textContent = 'Whack-a-Mole!';
-    button.textContent = 'Game Start';
+    button.textContent = 'Have Fun!';
   } else {
     // Start or restart the game
     showImageInRandomCell();
