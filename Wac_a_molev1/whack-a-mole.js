@@ -57,7 +57,9 @@ function showImageInRandomCell() {
 
     isIntervalPaused = true;
     const gameOverTitle = document.querySelector('.titles');
+    console.log(gameOverTitle);
     gameOverTitle.textContent = 'Game Over';
+    button.textContent = 'Restart';
   }
 }
 
@@ -91,7 +93,26 @@ function whackedMole(event) {
 // Click button to start the game
 const button = document.getElementById('myButton');
 button.addEventListener('click', () => {
-  showImageInRandomCell();
-  startGameInterval();
-  setTimeout(() => clearInterval(intervalId), 20000);
+  if (button.textContent === 'Restart') {
+    // Hide the end image
+    const endImage = document.querySelector('#gameTable img[src="./end.png"]');
+    if (endImage) {
+      endImage.parentNode.removeChild(endImage);
+    }
+
+    // Show the table cells
+    const tds = document.querySelectorAll('#gameTable td');
+    tds.forEach((td) => (td.style.display = 'table-cell'));
+    score = 0;
+    imageDisplayCount = 0;
+    document.getElementById('WAM_score').textContent = 'Score: 0/10';
+    const gameOverTitle = document.querySelector('.titles');
+    gameOverTitle.textContent = 'Whack-a-Mole!';
+    button.textContent = 'Game Start';
+  } else {
+    // Start or restart the game
+    showImageInRandomCell();
+    startGameInterval();
+    setTimeout(() => clearInterval(intervalId), 20000);
+  }
 });

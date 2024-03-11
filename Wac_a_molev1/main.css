@@ -21,6 +21,11 @@ td {
   height: 75px;
   width: 75px;
 }
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
 #myButton{
          position: relative;
   background-color: rgb(230, 34, 77);
