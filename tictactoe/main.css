@@ -15,6 +15,47 @@ table {
      box-shadow: 7px 14px 7px -2px rgba(207,207,207,0.61);
   }
 
+.navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      padding:10px;
+      overflow: hidden;
+      position: fixed;
+      top:0;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      z-index: 100;
+      margin-bottom: 5rem;
+     }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .navbar-logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-home {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-right:50px ;
+    }
+
+    #game-section{
+      padding: 2rem;
+    }
+
 h1 {
     text-align: center;
     margin-top: 0;

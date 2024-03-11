@@ -16,6 +16,9 @@ table {
   margin: 0 auto;
 }
 
+  #game-section{
+      padding: 2rem;
+    }
  .navbar {
       display: flex;
       align-items: center;
