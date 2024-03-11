@@ -1,101 +1,97 @@
-// get the table element to an array
+// Get the table element to an array
 const cellCollection = Array.from(document.querySelectorAll('td'));
-console.log(cellCollection);
 
-// randomly select a cell from the array(an random index)
-function randomCell(arr) {
-  const randomIndex = Math.floor(Math.random() * arr.length);
+// Create an image element for the mole
+const moleImage = document.createElement('img');
+moleImage.src = './mole.png';
+moleImage.width = '75';
+moleImage.height = '75';
+moleImage.id = 'mole';
 
-  const item = arr[randomIndex];
-  return item;
-}
-
-// put a image in the random cell
-// 1.adding img tag
-const image = document.createElement('img');
-// adding image detail
-image.src = './mole.png';
-image.id = 'mole';
-image.width = '75';
-image.height = '75';
+// Game variables
 let score = 0;
-const scoreElement = document.getElementById('WAM_score');
-let isIntervalPaused = false;
-
-// Counter for the number of times the image is displayed
-let imageDisplayCount = 0;
-// Maximum number of image displays
 const maxImageDisplays = 10;
+let isIntervalPaused = false;
+let imageDisplayCount = 0;
 let intervalId;
 
+// Function to start the game interval
 function startGameInterval() {
   intervalId = setInterval(showImageInRandomCell, 800);
 }
-// put the image to the random cell
+
+// Function to randomly select a cell
+function randomCell(arr) {
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+}
+
+// Function to show the mole image in a random cell
 function showImageInRandomCell() {
-  if (isIntervalPaused) {
-    return;
-  }
-  randomCell(cellCollection).appendChild(image);
-  let object = document.getElementById('mole');
-  console.log(object);
-  object.addEventListener('click', whackedMole);
+  if (isIntervalPaused) return;
+
   imageDisplayCount++;
-  if (imageDisplayCount >= maxImageDisplays) {
-    // Stop the interval after reaching the maximum image displays
-    clearInterval(intervalId);
-    const gameOverMessage = document.getElementById('gameOverMessage');
-    gameOverMessage.textContent = 'Game Over';
-    gameOverMessage.style.display = 'block';
+  console.log(imageDisplayCount);
+
+  if (imageDisplayCount < maxImageDisplays) {
+    const randomCellElement = randomCell(cellCollection);
+    randomCellElement.appendChild(moleImage);
+
+    moleImage.addEventListener('click', whackedMole);
+
+    if (imageDisplayCount >= maxImageDisplays) {
+      clearInterval(intervalId);
+      isIntervalPaused = true;
+      const gameOverTitle = document.querySelector('.titles');
+      gameOverTitle.textContent = 'Game Over';
+    }
+  } else {
+    const tds = document.querySelectorAll('#gameTable td');
+    tds.forEach((td) => (td.style.display = 'none'));
+
+    const endImage = document.createElement('img');
+    endImage.src = './end.png';
+    endImage.style.width = '100%';
+    endImage.style.height = '100%';
+    document.getElementById('gameTable').appendChild(endImage);
+
+    isIntervalPaused = true;
+    const gameOverTitle = document.querySelector('.titles');
+    gameOverTitle.textContent = 'Game Over';
   }
 }
-// click button to start the game
-const button = document.getElementById('myButton');
-button.addEventListener('click', function () {
-  showImageInRandomCell();
-  startGameInterval(); // Call the function on button click
-  // Start the interval
-  setTimeout(function () {
-    clearInterval(intervalId); // Stop the interval after 10 seconds
-  }, 20000);
-});
 
+// Function to handle mole click event
 function whackedMole(event) {
-  // Change the source of the mole image
-  const clickedMole = event.target; // Get the clicked mole image element
+  const clickedMole = event.target;
+
   clickedMole.src = './got_a_mole.png';
   isIntervalPaused = true;
-  setTimeout(function () {
-    isIntervalPaused = false;
-  }, 1000);
+  setTimeout(() => (isIntervalPaused = false), 1000);
 
   var audio = new Audio();
   audio.src = './whack-audio.wav';
   audio.play();
 
   if (clickedMole.src.endsWith('mole.png')) {
-    // Increase the score
     score++;
-    // Update the score in the HTML
-    scoreElement.textContent = 'Score:' + score + '/10';
+    document.getElementById('WAM_score').textContent = 'Score: ' + score + '/10';
   }
 
   if (imageDisplayCount >= maxImageDisplays) {
-    object.removeEventListener('click', whackedMole); // Remove the click event listener
-    return (clickedMole.src = './end.png'); // Stop further image displays
+    moleImage.removeEventListener('click', whackedMole);
   }
 
-  setTimeout(function () {
-    image.src = './mole.png';
-    randomCell(cellCollection).appendChild(image);
+  setTimeout(() => {
+    moleImage.src = './mole.png';
+    randomCell(cellCollection).appendChild(moleImage);
   }, 1000);
 }
 
-// Function to stop the interval after 10 seconds
-// function to record score
-// function score (){
-// get the id for the WAM_score
-// push the score back
-// if mole image is clicked
-// return score ++
-// if mole is not clicked return nothing
+// Click button to start the game
+const button = document.getElementById('myButton');
+button.addEventListener('click', () => {
+  showImageInRandomCell();
+  startGameInterval();
+  setTimeout(() => clearInterval(intervalId), 20000);
+});
